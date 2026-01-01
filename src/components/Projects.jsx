@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Search, BarChart3, Database } from "lucide-react";
+import { Search, BarChart3, Database, Dice4 } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -9,7 +9,7 @@ const Projects = () => {
       title: "Chesz AI",
       description:
         "An AI-powered web application that automates research by allowing users to submit queries and receive structured research outputs generated using multiple large language models, reducing the time required to gather and organize information.",
-      icon: Search,
+      icon: Dice4,
       technologies: [
         "Multiple LLMs",
         "React",

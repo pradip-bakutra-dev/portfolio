@@ -31,9 +31,9 @@ const Skills = () => {
     {
       title: "Tools & Libraries",
       skills: [
-        { name: "Redux", level: 80 },
         { name: "Cursor AI", level: 95 },
         { name: "Git", level: 80 },
+        { name: "Redux", level: 80 },
         { name: "Ant Design", level: 70 },
       ],
     },
