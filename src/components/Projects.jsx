@@ -6,6 +6,25 @@ import { Search, BarChart3, Database } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "Chesz AI",
+      description:
+        "An AI-powered web application that automates research by allowing users to submit queries and receive structured research outputs generated using multiple large language models, reducing the time required to gather and organize information.",
+      icon: Search,
+      technologies: [
+        "Multiple LLMs",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "REST APIs",
+      ],
+      features: [
+        "AI-driven automated research based on user queries",
+        "Agent-based research selection to tailor AI responses",
+        "Structured research outputs for better readability and clarity",
+      ],
+      category: "Web Application",
+    },
+    {
       title: "Tech Scouting Platform",
       description:
         "A comprehensive platform for technology research and scouting, helping organizations identify and evaluate emerging technologies and solutions.",

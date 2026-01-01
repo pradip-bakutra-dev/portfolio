@@ -12,6 +12,8 @@ import {
   GitBranch,
   SquareCode,
   GraduationCap,
+  Box,
+  Wind,
 } from "lucide-react";
 
 const Skills = () => {
@@ -21,17 +23,18 @@ const Skills = () => {
       skills: [
         { name: "React.js", level: 90 },
         { name: "JavaScript", level: 85 },
+        { name: "Tailwind", level: 85 },
         { name: "HTML/CSS", level: 85 },
-        { name: "Redux", level: 80 },
         // { name: "React Router", level: 85, icon: "🛣️" },
       ],
     },
     {
       title: "Tools & Libraries",
       skills: [
-        { name: "Ant Design", level: 70 },
+        { name: "Redux", level: 80 },
+        { name: "Cursor AI", level: 95 },
         { name: "Git", level: 80 },
-        { name: "VS Code", level: 90 },
+        { name: "Ant Design", level: 70 },
       ],
     },
     {
@@ -70,6 +73,8 @@ const Skills = () => {
     "Ant Design": <Boxes className="size-4" />,
     Git: <GitBranch className="size-4" />,
     "VS Code": <SquareCode className="size-4" />,
+    "Cursor AI": <Box className="size-4" />,
+    Tailwind: <Wind className="size-4" />,
   };
 
   return (
