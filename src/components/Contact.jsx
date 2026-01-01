@@ -142,7 +142,7 @@ const Contact = () => {
                     <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
                     <a
                       href={
-                        "https://drive.google.com/file/d/1AcL46-1lAbKIj8M3dV4-6Ai0qx317Zo1/view?usp=sharing"
+                        "https://drive.google.com/file/d/1iLbE5LyaqxgsKqYpn1j68DoGG1gkqrfS/view?usp=sharing"
                       }
                       target="_blank"
                       rel="noopener noreferrer"
