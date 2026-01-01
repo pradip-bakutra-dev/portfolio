@@ -10,7 +10,7 @@ const Footer = () => {
             Built with React & Tailwind.
           </p>
           <p className="mt-2 text-sm">
-            © 2025 Pradip Bakutra . All rights reserved.
+            © 2026 Pradip Bakutra . All rights reserved.
           </p>
         </div>
       </div>
