@@ -9,7 +9,7 @@ const About = () => {
       icon: Zap,
       title: "Adaptability",
       description:
-        "Quickly adapted to the React ecosystem at Ideapdoke Technologies and began contributing to projects within the first few months.",
+        "Quickly adapted to the React ecosystem at Ideapoke Technologies and began contributing to projects within the first few months.",
     },
     {
       icon: Users,

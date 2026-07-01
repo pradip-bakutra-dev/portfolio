@@ -6,7 +6,7 @@ const Experience = () => {
   const experiences = [
     {
       title: "React Developer",
-      company: "Ideapdoke Technologies",
+      company: "IdeapokeTechnologies",
       location: "Bengaluru, India",
       period: "2022 - Present",
       type: "Full-time",
@@ -28,7 +28,7 @@ const Experience = () => {
     },
     {
       title: "Software Engineer",
-      company: "Ideapdoke Technologies",
+      company: "IdeapokeTechnologies",
       location: "Bengaluru, India",
       period: "2021 - 2022",
       type: "Full-time",

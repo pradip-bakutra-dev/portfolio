@@ -1,1 +1,1 @@
-export const EXPERIENCE = 3.5;
+export const EXPERIENCE = 4;
