@@ -6,7 +6,6 @@ import {
   FileCode2,
   Palette,
   Repeat,
-  Coffee,
   Database,
   Boxes,
   GitBranch,
@@ -14,36 +13,64 @@ import {
   GraduationCap,
   Box,
   Wind,
+  Server,
+  Cloud,
+  Sparkles,
+  Zap,
+  Users,
+  Gauge,
 } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Languages",
       skills: [
-        { name: "React.js", level: 90 },
-        { name: "JavaScript", level: 85 },
-        { name: "Tailwind", level: 85 },
-        { name: "HTML/CSS", level: 85 },
-        // { name: "React Router", level: 85, icon: "🛣️" },
+        { name: "JavaScript (ES6+)", level: 90 },
+        { name: "HTML5", level: 85 },
+        { name: "CSS3", level: 85 },
+        { name: "SQL", level: 70 },
       ],
     },
     {
-      title: "Tools & Libraries",
+      title: "Frontend",
       skills: [
-        { name: "Cursor AI", level: 95 },
-        { name: "Git", level: 80 },
+        { name: "React.js", level: 90 },
+        { name: "Next.js", level: 75 },
         { name: "Redux", level: 80 },
+        { name: "React Router", level: 85 },
+        { name: "Tailwind CSS", level: 85 },
         { name: "Ant Design", level: 70 },
       ],
     },
     {
-      title: "Backend & Databases",
+      title: "Backend",
       skills: [
-        { name: "Java", level: 20 },
-        // { name: "SQL", level: 60, icon: "🗃️" },
-        { name: "MySQL", level: 60 },
-        // { name: "REST APIs", level: 80, icon: "🔗" },
+        { name: "Node.js", level: 75 },
+        { name: "Express.js", level: 75 },
+        { name: "REST APIs", level: 80 },
+        { name: "MySQL", level: 65 },
+      ],
+    },
+    {
+      title: "AI & Tools",
+      skills: [
+        { name: "LLM Integration", level: 85 },
+        { name: "Prompt Engineering", level: 80 },
+        { name: "Cursor AI", level: 95 },
+        { name: "VS Code", level: 90 },
+        { name: "Antigravity", level: 80 },
+        { name: "Git", level: 80 },
+        { name: "Vite", level: 85 },
+        { name: "Postman", level: 75 },
+      ],
+    },
+    {
+      title: "Practices",
+      skills: [
+        { name: "Agile/Scrum", level: 85 },
+        { name: "AWS EC2", level: 75 },
+        { name: "Performance Optimization (Lighthouse)", level: 85 },
       ],
     },
   ];
@@ -51,30 +78,43 @@ const Skills = () => {
   const certifications = [
     {
       title: "Software Development",
-      issuer: "jSpiders Institute, Bengaluru",
+      issuer: "jSpider Institute, Bengaluru",
       description:
-        "Certificate Course Focused on advanced concepts of Frontend and backend development",
+        "Certificate course focused on advanced concepts of frontend and backend development",
     },
     {
-      title: "React - The Complete Guide",
-      issuer: "Udemy | Maximilian Schwarzmuller",
-      description:
-        "Comprehensive course on React, covering advanced topics like Hooks, React Router, and Redux",
+      title: "React – The Complete Guide",
+      issuer: "Udemy, Maximilian Schwarzmüller",
+      description: "Hooks, React Router, Redux",
     },
   ];
 
   const iconMap = {
+    "JavaScript (ES6+)": <FileCode2 className="size-4" />,
+    HTML5: <Palette className="size-4" />,
+    CSS3: <Palette className="size-4" />,
+    SQL: <Database className="size-4" />,
     "React.js": <Code2 className="size-4" />,
-    JavaScript: <FileCode2 className="size-4" />,
-    "HTML/CSS": <Palette className="size-4" />,
+    "Next.js": <Code2 className="size-4" />,
     Redux: <Repeat className="size-4" />,
-    Java: <Coffee className="size-4" />,
-    MySQL: <Database className="size-4" />,
+    "React Router": <Repeat className="size-4" />,
+    "Tailwind CSS": <Wind className="size-4" />,
     "Ant Design": <Boxes className="size-4" />,
-    Git: <GitBranch className="size-4" />,
-    "VS Code": <SquareCode className="size-4" />,
+    "Node.js": <Server className="size-4" />,
+    "Express.js": <Server className="size-4" />,
+    "REST APIs": <Server className="size-4" />,
+    MySQL: <Database className="size-4" />,
+    "LLM Integration": <Sparkles className="size-4" />,
+    "Prompt Engineering": <Sparkles className="size-4" />,
     "Cursor AI": <Box className="size-4" />,
-    Tailwind: <Wind className="size-4" />,
+    "VS Code": <SquareCode className="size-4" />,
+    Antigravity: <Zap className="size-4" />,
+    Git: <GitBranch className="size-4" />,
+    Vite: <Zap className="size-4" />,
+    Postman: <Server className="size-4" />,
+    "Agile/Scrum": <Users className="size-4" />,
+    "AWS EC2": <Cloud className="size-4" />,
+    "Performance Optimization (Lighthouse)": <Gauge className="size-4" />,
   };
 
   return (

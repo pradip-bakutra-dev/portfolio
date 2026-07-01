@@ -5,44 +5,46 @@ import { Calendar, MapPin, Building2 } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "React Developer",
-      company: "IdeapokeTechnologies",
+      title: "Senior Frontend Developer",
+      company: "Ideapoke Technologies",
       location: "Bengaluru, India",
-      period: "2022 - Present",
+      period: "Dec 2022 – Present",
       type: "Full-time",
+      summary:
+        "Primary frontend developer for Chesz AI, a production AI-powered research automation platform, working within a 5-person Agile team (2 developers, 1 QA, 1 project manager).",
       responsibilities: [
-        "Contributed to frontend development with a primary focus on React-based applications",
-        "Developed and maintained dynamic, responsive web applications using React.js and Redux",
-        "Improved performance and user experience through optimization techniques",
-        "Collaborated with cross-functional teams using React Router for seamless navigation",
-        "Integrated Ant Design for pre-built, customizable UI components for responsive layouts",
+        "Resolved 700+ issues on the Chesz AI Jira board, serving as the primary frontend developer responsible for feature delivery and production stability.",
+        "Designed and shipped core product features end-to-end, including file downloads, advanced filtering and search, Save to collections, a platform credit management system, and secure login/signup flows.",
+        "Improved application performance and Google Lighthouse scores through React rendering optimization, code-splitting, and asset/bundle size reduction.",
+        "Built reusable, responsive UI components using React.js and Redux, increasing development speed across the team.",
+        "Implemented client-side routing with React Router, enabling seamless navigation across a multi-page enterprise application.",
+        "Deployed and maintained production builds on AWS EC2, supporting reliable uptime for live users.",
       ],
       technologies: [
         "React.js",
         "Redux",
         "React Router",
-        "Ant Design",
         "JavaScript",
-        "HTML/CSS",
+        "AWS EC2",
       ],
     },
     {
       title: "Software Engineer",
-      company: "IdeapokeTechnologies",
+      company: "Ideapoke Technologies",
       location: "Bengaluru, India",
-      period: "2021 - 2022",
+      period: "May 2022 – Dec 2022",
       type: "Full-time",
+      summary:
+        "Worked on both frontend and backend development, utilizing JavaScript, Node.js, and SQL.",
       responsibilities: [
-        "Worked on both frontend and backend development using JavaScript and Java with SQL",
-        "Designed and maintained APIs using Java, implementing CRUD operations",
-        "Handled database data manipulation and integration with frontend applications",
-        "Worked with relational databases such as MySQL, implementing efficient queries",
-        "Developed frontend features using vanilla JavaScript, HTML, and CSS",
+        "Designed and built RESTful APIs using Node.js and Express.js, implementing CRUD operations that powered core frontend workflows.",
+        "Worked with MySQL relational databases, writing efficient queries to support application data and reporting needs.",
+        "Developed interactive frontend features using vanilla JavaScript, HTML, and CSS, contributing to early-stage product development.",
       ],
       technologies: [
         "JavaScript",
-        "Java",
-        "SQL",
+        "Node.js",
+        "Express.js",
         "MySQL",
         "HTML",
         "CSS",
@@ -108,6 +110,10 @@ const Experience = () => {
 
               <CardContent>
                 <div className="space-y-6">
+                  <p className="text-muted-foreground leading-relaxed">
+                    {exp.summary}
+                  </p>
+
                   <div>
                     <h4 className="font-semibold mb-3 text-foreground">
                       Key Responsibilities

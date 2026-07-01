@@ -1,70 +1,45 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Search, BarChart3, Database, Dice4 } from "lucide-react";
+import { Search, Dice4 } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
       title: "Chesz AI",
       description:
-        "An AI-powered web application that automates research by allowing users to submit queries and receive structured research outputs generated using multiple large language models, reducing the time required to gather and organize information.",
+        "AI-powered research automation platform generating structured insights from user queries using LLM-based processing.",
       icon: Dice4,
       technologies: [
-        "Multiple LLMs",
         "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "REST APIs",
+        "JavaScript",
+        "Redux",
+        "Node.js",
+        "AWS EC2",
       ],
       features: [
-        "AI-driven automated research based on user queries",
-        "Agent-based research selection to tailor AI responses",
-        "Structured research outputs for better readability and clarity",
+        "Designed prompt-driven workflows to extract, structure, and summarize AI-generated research outputs.",
+        "Built a multi-stage AI response handling pipeline to improve output clarity and usability.",
+        "Developed a frontend dashboard to visualize AI-generated structured data for end users.",
       ],
-      category: "Web Application",
+      category: "Live Production Platform",
     },
     {
-      title: "Tech Scouting Platform",
+      title: "Tech Scouting, Research Design Tool (RDT) & Signalz",
       description:
-        "A comprehensive platform for technology research and scouting, helping organizations identify and evaluate emerging technologies and solutions.",
+        "Three client-facing research and analytics tools built for Ideapoke clients, covering company/technology scouting, data relationship mapping, and structured market/company search.",
       icon: Search,
-      technologies: ["React.js", "Redux", "JavaScript", "CSS", "REST APIs"],
-      features: [
-        "Advanced search and filtering capabilities",
-        "Technology trend analysis",
-        "Interactive data visualization",
-        "Real-time updates and notifications",
+      technologies: [
+        "React.js",
+        "JavaScript",
+        "Redux",
+        "REST APIs",
+        "ChatGPT Integration",
       ],
-      category: "Web Application",
-    },
-    {
-      title: "Research Design Tool (RDT)",
-      description:
-        "An intuitive design tool for researchers to create, manage, and visualize research methodologies and data structures.",
-      icon: BarChart3,
-      technologies: ["React.js", "React Router", "SQL", "Ant Design"],
       features: [
-        "Drag-and-drop interface for research design",
-        "Data flow visualization",
-        "Collaborative editing capabilities",
-        "Export to multiple formats",
+        "Integrated ChatGPT-based ML data processing to structure company insights into JSON for frontend consumption.",
+        "Delivered end-to-end; later sunset by the business as part of product portfolio prioritization.",
       ],
-      category: "Design Tool",
-    },
-    {
-      title: "Research Process Automation",
-      description:
-        "Automated data validation and processing system that streamlines research workflows and ensures data quality.",
-      icon: Database,
-      technologies: ["JavaScript", "React.js"],
-      features: [
-        "Automated data validation",
-        "Process workflow management",
-        "Error detection and reporting",
-        "Integration with existing systems",
-      ],
-      category: "Automation Tool",
+      category: "Enterprise Research Tools",
     },
   ];
 

@@ -45,8 +45,9 @@ const About = () => {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A passionate developer dedicated to transforming ideas into
-            powerful, user-friendly applications that make a difference.
+            Frontend Developer with {EXPERIENCE}+ years of experience building
+            scalable, high-performance React applications, backed by hands-on
+            full-stack experience in Node.js, Express.js, and SQL.
           </p>
         </div>
 
@@ -54,27 +55,25 @@ const About = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
             <p className="text-muted-foreground leading-relaxed">
-              With over {EXPERIENCE} years of experience as a Developer, I've
-              successfully contributed to multiple projects, delivering scalable
-              and maintainable code. My journey began with a strong foundation
-              in Engineering, and I've since specialized in modern web
-              development practices.
+              Primary developer on a production AI-powered research platform
+              (Chesz AI), responsible for resolving 700+ production bugs and
+              shipping core features end-to-end within a 5-person Agile team.
+              Skilled in JavaScript, React.js, Redux, REST API integration,
+              LLM/AI-powered feature development, and AWS deployment.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I thrive on building responsive, user-friendly web applications
-              that not only meet technical requirements but also provide
-              exceptional user experiences. My approach combines technical
-              expertise with creative problem-solving to deliver impactful
-              digital solutions.
+              Proven ability to optimize application performance, ship
+              production-ready features, and build reliable user-centric web
+              applications.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
               {[
                 "React.js",
                 "JavaScript",
                 "Redux",
-                "React Router",
-                "HTML/CSS",
-                "Java",
+                "Node.js",
+                "Express.js",
+                "Tailwind CSS",
                 "SQL",
               ].map((tech) => (
                 <Badge
