@@ -1,22 +1,24 @@
 import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
-import About from "../components/About.jsx";
-import Experience from "../components/Experience.jsx";
-import Skills from "../components/Skills.jsx";
-import Projects from "../components/Projects.jsx";
-import Contact from "../components/Contact.jsx";
+import Origin from "../components/Origin.jsx";
+import Journey from "../components/Journey.jsx";
+import Toolkit from "../components/Toolkit.jsx";
+import Work from "../components/Work.jsx";
+import Beyond from "../components/Beyond.jsx";
+import Invite from "../components/Invite.jsx";
 import Footer from "../components/Footer.jsx";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-bg-base">
       <Navbar />
       <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Origin />
+      <Journey />
+      <Toolkit />
+      <Work />
+      <Beyond />
+      <Invite />
       <Footer />
     </div>
   );

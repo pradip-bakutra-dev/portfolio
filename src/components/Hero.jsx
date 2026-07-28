@@ -1,159 +1,82 @@
-import { useState, useEffect, Suspense } from "react";
-import { Button } from "@/components/ui/button";
-import { Download, ArrowRight, Code2, MapPin } from "lucide-react";
-import Scene3D from "./3d/Scene3D";
-import { EXPERIENCE } from "@/lib/constants";
+import { useEffect, useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { HERO } from "@/lib/content";
 
 const Hero = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth - 0.5) * 2,
-        y: (e.clientY / window.innerHeight - 0.5) * 2,
-      });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    setMounted(true);
   }, []);
 
-  const scrollToContact = () => {
-    const element = document.querySelector("#contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const scrollToProjects = () => {
-    const element = document.querySelector("#projects");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToOrigin = () => {
+    document.querySelector("#origin")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden bg-bg-base"
     >
-      {/* 3D Background */}
-      <div className="absolute inset-0 opacity-20">
-        <Suspense
-          fallback={
-            <div className="absolute inset-0 bg-gradient-to-br from-background to-muted/20" />
-          }
-        >
-          <Scene3D />
-        </Suspense>
-      </div>
+      {/* Faint grid + scanline texture */}
+      <div className="absolute inset-0 circuit-grid scanline-texture opacity-[0.06] pointer-events-none" />
 
-      {/* Minimal overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background/50 via-transparent to-background/30" />
+      {/* Circuit trace background */}
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        viewBox="0 0 1200 800"
+        preserveAspectRatio="xMidYMid slice"
+        aria-hidden="true"
+      >
+        <path
+          d="M 80 600 L 200 600 L 280 520 L 400 520 L 480 440 L 620 440 L 700 360 L 860 360 L 940 280 L 1100 280"
+          fill="none"
+          stroke="var(--accent-circuit)"
+          strokeWidth="1.5"
+          strokeDasharray="200"
+          className={mounted ? "hero-trace-animate" : "opacity-0"}
+        />
+        <path
+          d="M 120 680 L 320 680 L 400 600 L 560 600"
+          fill="none"
+          stroke="var(--accent-signal)"
+          strokeWidth="1"
+          strokeDasharray="120"
+          opacity="0.15"
+          className={mounted ? "hero-trace-animate" : "opacity-0"}
+          style={{ animationDelay: "0.3s" }}
+        />
+        {/* Node markers */}
+        <circle cx="480" cy="440" r="3" fill="var(--accent-circuit)" opacity="0.4" />
+        <circle cx="700" cy="360" r="3" fill="var(--accent-signal)" opacity="0.4" />
+        <rect x="937" y="277" width="6" height="6" fill="var(--accent-circuit)" opacity="0.4" />
+      </svg>
 
-      <div className="container mx-auto px-6 relative z-10 max-w-4xl">
-        <div className="text-center space-y-12 mt-10">
-          {/* Clean typography */}
-          <div className="space-y-6">
-            <h1 className="text-6xl md:text-8xl font-light tracking-tight leading-none flex items-center justify-center gap-6 my-10">
-              <span
-                className="block text-foreground"
-                style={{
-                  transform: `translate(${mousePosition.x * 2}px, ${
-                    mousePosition.y * 1
-                  }px)`,
-                  transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
-                }}
-              >
-                Pradip
-              </span>
-              <span
-                className="block text-muted-foreground/60"
-                style={{
-                  transform: `translate(${-mousePosition.x * 1.5}px, ${
-                    -mousePosition.y * 0.5
-                  }px)`,
-                  transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
-                }}
-              >
-                Bakutra
-              </span>
-            </h1>
+      <div className="container relative z-10 py-32 md:py-40">
+        <div className="max-w-3xl">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-semibold leading-[1.15] tracking-tight text-text-primary">
+            {HERO.headline}
+          </h1>
 
-            <div className="space-y-4 max-w-3xl mx-auto">
-              <p className="text-xl md:text-2xl text-foreground/80 font-light">
-                Frontend Developer
-              </p>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Crafting digital experiences with clean code and thoughtful
-                design. Specializing in Frontend frameworks and user-centered
-                solutions.
-              </p>
-            </div>
-          </div>
+          <p className="mt-6 text-base md:text-lg text-text-muted leading-relaxed max-w-2xl">
+            {HERO.subhead}
+          </p>
 
-          {/* Minimal location info */}
-          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-            <MapPin className="w-4 h-4" />
-            <span>Bengaluru, India</span>
-          </div>
-
-          {/* Clean CTA section */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="group px-8 py-3 bg-foreground text-background hover:bg-foreground/90 border-0 font-medium"
-              onClick={scrollToProjects}
-            >
-              <span className="flex items-center gap-2">
-                View Work
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Button>
-
-            <Button
-              variant="ghost"
-              size="lg"
-              className="px-8 py-3 text-foreground hover:bg-muted/50 font-medium"
-              onClick={scrollToContact}
-            >
-              Get in touch
-            </Button>
-          </div>
-
-          {/* Minimal stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-xs mx-auto pt-12 border-t border-muted-foreground/10">
-            <div className="text-center">
-              <div className="text-lg font-medium text-foreground">
-                {EXPERIENCE}+
-              </div>
-              <div className="text-xs text-muted-foreground uppercase tracking-wider">
-                Years
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-lg font-medium text-foreground">
-                Web Apps
-              </div>
-              <div className="text-xs text-muted-foreground uppercase tracking-wider">
-                Focused
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-lg font-medium text-foreground">10+</div>
-              <div className="text-xs text-muted-foreground uppercase tracking-wider">
-                Projects
-              </div>
-            </div>
-          </div>
+          <p className="mt-8 font-mono text-xs md:text-sm tracking-[0.15em] text-accent-signal">
+            {HERO.tagline}
+          </p>
         </div>
       </div>
 
-      {/* Subtle scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
-        <div className="w-[1px] h-12 bg-gradient-to-b from-muted-foreground/30 to-transparent" />
-      </div>
+      {/* Scroll cue */}
+      <button
+        onClick={scrollToOrigin}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-muted hover:text-accent-circuit transition-colors"
+        aria-label="Scroll to origin section"
+      >
+        <span className="font-mono text-[10px] tracking-[0.2em] uppercase">Scroll</span>
+        <ChevronDown className="w-5 h-5 scroll-cue-animate" />
+      </button>
     </section>
   );
 };
